@@ -1,0 +1,43 @@
+﻿@page
+@model Gimel.Pages.PunchCountModel
+@{
+    ViewData["Title"] = "Punch Power";
+    ViewData["PageBackgroundClass"] = "punchpower-background";
+}
+<head>
+    <script src="~/js/test.js" defer></script>
+</head>
+<body class="@ViewData["PageBackgroundClass"]">
+    <div id="titleblock">
+        <h1>Punch Count Test</h1>
+    </div>
+
+    <div id="countscore">
+        
+    </div>
+
+    <div id="startButton">
+        <button name="startGame" id="startCountButton" value="Start Test">Start</button>
+        <button id="resetCountButton">Reset</button>
+        @* <button id="getResponse">Get Response</button> *@
+    </div>
+
+    <div id="nameEntry">
+        <form method="post">
+            <label for="nameInput" style="color: black; font-weight: bold">Enter your name:</label>
+            <input type="text" id="nameInput" name="nameInput" placeholder="Your Name" />
+            <button type="submit">Enter Name</button>
+        </form>
+        @if (PunchCountModel.UserName != null)
+        {
+            <p style="color: black; display: inline;">Your Name: @PunchCountModel.UserName</p>
+        }
+
+    </div>
+
+    <div id="testExplain">
+        <h3>Please wait up to 30 seconds for a beep.</h3>
+        <h3>After the first beep please hold still for calibration.</h3>
+        <h3>Then wait for a 2nd beep, On the 2nd beep you can start punching as many times as you can</h3>
+    </div>
+</body>

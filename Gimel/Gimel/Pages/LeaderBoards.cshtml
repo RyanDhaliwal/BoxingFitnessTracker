@@ -1,0 +1,66 @@
+﻿@page
+@model Gimel.Pages.LeaderBoardsModel
+@{
+    ViewData["Title"] = "Punch Power";
+    ViewData["PageBackgroundClass"] = "punchpower-background";
+}
+<head>
+    
+</head>
+<body class="@ViewData["PageBackgroundClass"]">
+    <div id="titleblock">
+        <h1>LeaderBoards</h1>
+    </div>
+
+    <button id="showPowerLeaderboardBtn">Show Power Leaderboard</button>
+    <button id="showCountLeaderboardBtn">Show Count Leaderboard</button>
+    <button id="showReactionTimeLeaderboardBtn">Show Reaction Time Leaderboard</button>
+    <div id="powerLeaderboardSection" style="display: none;">
+        <h2 style="color:black">Punch Power Leaderboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Power</th>
+                    <th>Speed</th>
+                    <th>Received Time</th>
+                </tr>
+            </thead>
+            <tbody id="powerLeaderboardTable">
+            </tbody>
+        </table>
+    </div>
+    <div id="countLeaderboardSection" style="display: none;">
+        <h2 style="color:black">Punch Count Leaderboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Punch Count</th>
+                    <th>Right Hand</th>
+                    <th>Left Hand</th>
+                    <th>Received Time</th>
+                </tr>
+            </thead>
+            <tbody id="countLeaderboardTable">
+            </tbody>
+        </table>
+    </div>
+    <div id="rtimeLeaderboardSection" style="display: none;">
+        <h2 style="color:black">Reaction Time Leaderboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Punch Time</th>
+                    <th>Speed</th>
+                    <th>Received Time</th>
+                </tr>
+            </thead>
+            <tbody id="rtimeLeaderboardTable">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/js/test.js" defer></script>
+</body>

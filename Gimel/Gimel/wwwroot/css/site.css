@@ -1,0 +1,163 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer{
+    background-color: black;
+}
+
+.index-background {
+    background-image: url('/Images/Background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.punchpower-background {
+    background-image: url('/Images/good.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#titleblock {
+    text-align: center;
+    border: 5px transparent solid;
+    font-weight:bold;
+    background-color:royalblue;
+    border-radius: 10px;
+    color: black;
+}
+
+#powerscore, #countscore, #rtimescore {
+    text-align: center;
+    color: black;
+    font-size: 100px;
+}
+#nameEntry
+{
+    text-align: center;
+}
+#testExplain {
+    text-align: center;
+    color: black;
+}
+#startButton {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#indexBody {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Adjust rows as needed */
+    grid-template-columns: repeat(3, 1fr); /* Same 3 equal columns */
+    padding-top: 20px;
+    height: 100vh; /* Ensure full height */
+}
+
+#title {
+    text-align: center;
+    color: powderblue;
+    border: 3px solid powderblue;
+    border-radius: 10px;
+    background-color: black;
+    grid-column: 1 / -1; /* Span all columns */
+    grid-row: 1; /* Place on the first row */
+}
+
+#centerButton {
+    padding-top: 400px;
+    padding-left: 50px;
+    text-align: center;
+    align-items: center;
+    grid-column: 2; /* Center button in the middle column */
+    grid-row: 3; /* Place on the last row */
+}
+#startgameButton
+{
+    background-color:black;
+    color: powderblue;
+    font-size: x-large;
+    font-weight: bold;
+    width: 250px;
+    height: 80px;
+    
+}
+button {
+    background-color: royalblue;
+    color: black;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover 
+{
+    background-color: rebeccapurple;
+}
+
+button:focus 
+{
+    outline: none;
+}
+
+#leaderboardSection {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color:whitesmoke;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 3px solid whitesmoke;
+    background-color:black;
+    color:whitesmoke;
+}
+
+th {
+    background-color: royalblue;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: powderblue;
+}
+
+/* Empty Data Handling */
+td[colspan="3"] {
+    text-align: center;
+    font-style: italic;
+    color: whitesmoke;
+}

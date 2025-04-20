@@ -1,0 +1,44 @@
+﻿@page
+@model Gimel.Pages.ReactionTimeModel
+@{
+    ViewData["Title"] = "Punch Power";
+    ViewData["PageBackgroundClass"] = "punchpower-background";
+}
+<head>
+    <script src="~/js/test.js" defer></script>
+</head>
+<body class="@ViewData["PageBackgroundClass"]">
+    <div id="titleblock">
+        <h1>Reaction Time Test</h1>
+    </div>
+
+    <div id="rtimescore">
+        
+    </div>
+
+    <div id="startButton">
+        <button name="startGame" id="startReactButton" value="Start Test">Start</button>
+        <button id="resetRTimeButton">Reset</button>
+        @* <button id="getResponse">Get Response</button> *@
+    </div>
+
+    <div id="nameEntry">
+        <form method="post">
+            <label for="nameInput" style="color: black; font-weight: bold">Enter your name:</label>
+            <input type="text" id="rtimeNameInput" name="rtimeNameInput" placeholder="Your Name" />
+
+            <button type="submit">Enter Name</button>
+        </form>
+        @if (ReactionTimeModel.UserName != "None")
+        {
+            <p style="color: whitesmoke; display: inline;">Your Name: @ReactionTimeModel.UserName</p>
+        }
+    </div>
+
+    <div id="testExplain">
+        <h3>Please wait up to 30 seconds for a beep.</h3>
+        <h3>After the first beep please hold still for calibration.</h3>
+        <h3>Then wait for a 2nd beep, that signals calibration complete.</h3>
+        <h3>Listen for 3 beeps, after the 3rd beep punch as fast as you can</h3>
+    </div>
+</body>

@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    ViewData["PageBackgroundClass"] = "index-background";
+}
+
+<body class="@ViewData["PageBackgroundClass"]" id="indexBody">
+    <div >
+        <div id="title">
+            <h1>Boxing Fitness Tracker</h1>
+        </div>
+
+        <div id="centerButton">
+            <button id="startgameButton"  onclick="location.href='@Url.Page("/PunchPower")'">Start Game</button>
+        </div>
+    </div>
+</body>

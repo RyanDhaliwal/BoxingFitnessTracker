@@ -1,0 +1,73 @@
+﻿@page
+@model Gimel.Pages.SearchModel
+@{
+    ViewData["Title"] = "Punch Power";
+    ViewData["PageBackgroundClass"] = "punchpower-background";
+}
+<head>
+    <script src="~/js/test.js" defer></script>
+</head>
+<body class="@ViewData["PageBackgroundClass"]">
+    <div id="titleblock">
+        <h1>Search Stats</h1>
+    </div>
+
+    <div id="nameEntry">
+        <form method="post">
+            <label for="nameInput" style="color: black; font-weight: bold">Enter your name:</label>
+            <input type="text" id="searchUserName" name="searchUserName" placeholder="Your Name" />
+
+            <button type="submit">Search</button>
+        </form>
+        <button id="DisplayStats">Display Stats</button>
+    </div>
+
+    @if (SearchModel.searchUserName != "None")
+    {
+        <h2 style="color:black">Search Results for @SearchModel.searchUserName</h2>
+    }
+    <div id="powerSearchSection" style="display: none;">
+        <h2 style="color:black">Punch Power</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Power</th>
+                    <th>Speed</th>
+                    <th>Received Time</th>
+                </tr>
+            </thead>
+            <tbody id="powerSearchTable">
+            </tbody>
+        </table>
+    </div>
+    <div id="countSearchSection" style="display: none;">
+        <h2 style="color:black">Punch Count</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Punch Count</th>
+                    <th>Right Hand</th>
+                    <th>Left Hand</th>
+                    <th>Received Time</th>
+                </tr>
+            </thead>
+            <tbody id="countSearchTable">
+            </tbody>
+        </table>
+    </div>
+    <div id="rtimeSearchSection" style="display: none;">
+        <h2 style="color:black">Reaction Time</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Punch Time</th>
+                    <th>Speed</th>
+                    <th>Received Time</th>
+                </tr>
+            </thead>
+            <tbody id="rtimeSearchTable">
+            </tbody>
+        </table>
+    </div>
+  
+</body>
